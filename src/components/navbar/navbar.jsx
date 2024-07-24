@@ -16,15 +16,14 @@ const Navbar = () => {
           <img src="./public/logo.png" alt="Logo" className="logo-image" />
           <span className="site-title">Vitality Vision</span>
         </Link>
-
         <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/ajuda" className="nav-links">
+            <Link to="/ajuda" className="site-title">
               Ajuda
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/contato " className="nav-links">
+            <Link to="/contato " className="site-title">
               Contato
             </Link>
           </li>

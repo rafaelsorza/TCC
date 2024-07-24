@@ -1,50 +1,64 @@
-
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-
-import './login.css';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import './Login.css';
 
 function Login() {
-  const [input, setInput] = useState({
-    identifier: '', // Pode ser email, usuário ou telefone
-    password: ''
-  });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setInput({
-      ...input,
-      [name]: value
-    });
-  };
-
+React.useEffect(() => {
+    function SwitchContent() {
+      const content = document.getElementById('content');
+      const loginBtn = document.getElementById('login');
   
-  return (
-    <div className='mae'> 
-    <div className='container'> </div>
-    <div className="login-container">
-      <h2>Login</h2>
-      <form>
-        <input
-          type="text"
-          name="identifier"
-          placeholder="Email, Usuário ou Telefone"
-          value={input.identifier}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Senha"
-          value={input.password}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit" className="login-button">Avançar</button>
+     
+      loginBtn.addEventListener('click', () => {
+        content.classList.remove("active")
+      });
+    }
+    SwitchContent();
+  }, []);
+
+const navigate = useNavigate();
+const [values, setValues] = useState({
+    email: '',
+    password: ''
+})
+
+ function login(event) {
+    event.preventDefault();
+    axios.post("http://localhost:8081/login",values)
+      .then(res => {
+        if(res.data.Status === "Success"){
+        navigate("/homework");
+        } else{
+            alert(res.data.Error)
+        }
+      }).catch(err => console.log(err));
+  }
+
+return(
+<div className="login-area" id="content">
+      <form onSubmit={login}>
+        <div className="header-text">
+          <h1>Login</h1>
+        </div> 
+
+        <div className="input-group">
+          <input type='email' placeholder='email' className='form-control' onChange={e => setValues({...values,email:e.target.value})} />
+        </div>
+
+        <div className="input-group">
+          <input type='password' placeholder='password' className='form-control' onChange={e => setValues({...values,password:e.target.value})}/>
+        </div>
+
+        <div className='input-button'>
+          <button className='btn-login' id='login'>Login</button>
+        </div>
       </form>
-    </div></div>
-  );
+    </div>
+)
+
 }
 
-export default Login; 
+export default Login;

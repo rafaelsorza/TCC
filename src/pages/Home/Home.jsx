@@ -17,7 +17,7 @@ function Home() {
               eficiente.
             </p>
 
-            <Link to="/homework" className="start-Link">
+            <Link to="/register" className="start-Link">
               Iniciar
             </Link>
           </div>

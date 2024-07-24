@@ -12,16 +12,15 @@ function Homework() {
     <>
       <div>
         <Navbar />
-        <div className="container">
-          <div className="inner-container">
-            
-             
+        <div className="homework-area">
+
+             <h1> homework bb </h1>
             
             
           </div>
         </div>
-      </div>
-    </>
+      </>
+  
   );
 }
 

@@ -1,40 +1,32 @@
-
-
-
 .header-section {
-    background: #28a745; /* Cor de fundo verde */
-    color: #fff; /* Texto branco */
-    padding: 60px 20px; /* Padding para espaçamento interno */
-    text-align: left;
-    display: flex;
-    align-items: end;
-    height: 80vh; /* Altura total da visualização */
-    width: 97.05vw; /* Largura total da visualização */
-    top: 0;
-    z-index: 0; /* Ajuste o z-index conforme necessário para sobreposição */
-    
-  }
+  background: #28a745; /* Cor de fundo verde */
+  color: #fff; /* Texto branco */
+  padding: 45vh 10vh; /* Padding para espaçamento interno */
+  text-align: left;
+  display: flex;
+
+  height: 60vh; /* Altura total da visualização */
+  width: 100%; /* Largura total da visualização */
+  top: 0;
+  z-index: 0; /* Ajuste o z-index conforme necessário para sobreposição */
+  flex-direction: column; /* Flex direction column para telas menores */
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+
+  margin-right: 0;
   
-  
-  
-  .header-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 7px;
-    margin-right: 70vh;
-    margin-top: 50vh;
-  }
-  
-  .header-subtitle {
-    font-size: 1.5rem;
-    
-    margin-right: 70vh;
-    
-  }
-  
-  
-  
- /* FeaturesSection.css */
+}
+
+.header-subtitle {
+  font-size: 1.5rem;
+  margin-right: 0;
+ 
+}
+
+/* FeaturesSection.css */
 .features-section {
   display: flex;
   flex-direction: column;
@@ -45,71 +37,64 @@
 
 .feature-item {
   justify-content: space-around;
-  
   display: flex;
   align-items: center;
   background: #ffffff; /* Fundo claro */
   padding: 20px;
   border-radius: 10px; /* Bordas arredondadas */
- 
+  flex-direction: column; /* Flex direction column para telas menores */
 }
 
 .feature-item img {
-  width: 70vh; /* Largura da imagem */
-  height: 65vh; /* Altura da imagem */
+  width: 100%; /* Largura da imagem ajustada para 100% */
+  max-width: 70vh; /* Limite máximo de largura */
+  height: auto; /* Altura automática para manter a proporção */
   border-radius: 10px; /* Bordas arredondadas */
   object-fit: cover; /* Ajusta a imagem ao container */
-  margin-left: 10vh;
-  
+  margin-left: 0; /* Remove margin-left */
+  margin-bottom: 10px; /* Adiciona espaçamento inferior */
 }
 
 .feature-item:nth-child(2) img {
-  margin-right: 10vh; /* Remove espaçamento à direita para a segunda div */
-
+  margin-right: 0; /* Remove espaçamento à direita para a segunda div */
 }
 
 .feature-content {
   flex: 1;
-  max-width: 78vh;
+  max-width: 100%; /* Max width ajustado para 100% */
   margin: auto;
-  
+  text-align: center; /* Centraliza o texto para telas menores */
 }
 
 .feature-title {
-  font-size: 7vh;
+  font-size: 4vh; /* Tamanho de fonte ajustável */
   font-weight: bold;
   margin-bottom: 10px;
   color: #000;
-  
-
-  
 }
 
 .feature-title1 {
-  font-size: 7vh;
+  font-size: 4vh; /* Tamanho de fonte ajustável */
   font-weight: bold;
   margin-bottom: 10px;
   color: #000;
 }
 
-
 .feature-subtitle {
-  font-size: 3vh;
+  font-size: 2.5vh; /* Tamanho de fonte ajustável */
   color: #424242; /* Cor do subtítulo */
   text-align: justify; /* Justifica o texto */
   text-justify: inter-word; /* Adicionalmente justifica o texto entre palavras */
 }
-
 
 .feature-subtitle1 {
-  font-size: 3vh;
+  font-size: 2.5vh; /* Tamanho de fonte ajustável */
   color: #424242; /* Cor do subtítulo */
   text-align: justify; /* Justifica o texto */
   text-justify: inter-word; /* Adicionalmente justifica o texto entre palavras */
-
 }
 
-.start-Link{
+.start-Link {
   background-color: transparent; 
   border: 1px solid white;
   color: rgb(255, 255, 255); 
@@ -119,7 +104,7 @@
   display: inline-block;
   font-size: 2vh;
   font-weight: bold;
-  margin: 4px 2px;
+  margin-bottom: 10vh;
   cursor: pointer;
   border-radius: 50vh; /* Bordas arredondadas */
   transition: background-color 0.3s ease; /* Transição suave */
@@ -129,3 +114,43 @@
   background-color: #45a049; /* Cor de fundo verde escuro ao passar o mouse */
 }
 
+/* Media Queries para Responsividade */
+@media (min-width: 768px) {
+  .header-section {
+    flex-direction: row; /* Altera para linha em telas maiores */
+   
+  }
+
+  .header-title {
+    margin-right: 70vh;
+    margin-top: 0;
+  }
+
+  .header-subtitle {
+    margin-right: 70vh;
+  }
+
+  .feature-item {
+    flex-direction: row; /* Altera para linha em telas maiores */
+  }
+
+  .feature-item img {
+    margin-left: 10vh; /* Adiciona margem esquerda */
+  }
+
+  .feature-item:nth-child(2) img {
+    margin-right: 10vh; /* Adiciona margem direita para a segunda div */
+  }
+
+  .feature-content {
+    text-align: left; /* Alinha o texto à esquerda para telas maiores */
+  }
+
+  .feature-title, .feature-title1 {
+    font-size: 7vh; /* Ajusta o tamanho da fonte para telas maiores */
+  }
+
+  .feature-subtitle, .feature-subtitle1 {
+    font-size: 3vh; /* Ajusta o tamanho da fonte para telas maiores */
+  }
+}
