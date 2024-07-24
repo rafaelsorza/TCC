@@ -1,0 +1,51 @@
+
+.footer_area {
+  width: 100%;
+  background-color: #47ac5d; /* Cor verde */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+ 
+  bottom: 0;
+  left: 0;
+  display: flex;
+ 
+}
+
+.footer_area.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.links-section{
+    margin-left: 5vh;
+    margin-top: 0;
+}
+
+.links-section-2{
+    margin-left: 10vh;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+ 
+}
+
+ul li {
+  
+  margin-top: 0;
+}
+
+ul li a {
+  color: #cecece;
+  text-decoration: none;
+}
+

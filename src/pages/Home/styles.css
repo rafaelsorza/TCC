@@ -1,0 +1,131 @@
+
+
+
+.header-section {
+    background: #28a745; /* Cor de fundo verde */
+    color: #fff; /* Texto branco */
+    padding: 60px 20px; /* Padding para espaçamento interno */
+    text-align: left;
+    display: flex;
+    align-items: end;
+    height: 80vh; /* Altura total da visualização */
+    width: 97.05vw; /* Largura total da visualização */
+    top: 0;
+    z-index: 0; /* Ajuste o z-index conforme necessário para sobreposição */
+    
+  }
+  
+  
+  
+  .header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 7px;
+    margin-right: 70vh;
+    margin-top: 50vh;
+  }
+  
+  .header-subtitle {
+    font-size: 1.5rem;
+    
+    margin-right: 70vh;
+    
+  }
+  
+  
+  
+ /* FeaturesSection.css */
+.features-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh; /* Espaçamento entre as divs */
+  padding: 20px;
+  margin-top: 15vh;
+}
+
+.feature-item {
+  justify-content: space-around;
+  
+  display: flex;
+  align-items: center;
+  background: #ffffff; /* Fundo claro */
+  padding: 20px;
+  border-radius: 10px; /* Bordas arredondadas */
+ 
+}
+
+.feature-item img {
+  width: 70vh; /* Largura da imagem */
+  height: 65vh; /* Altura da imagem */
+  border-radius: 10px; /* Bordas arredondadas */
+  object-fit: cover; /* Ajusta a imagem ao container */
+  margin-left: 10vh;
+  
+}
+
+.feature-item:nth-child(2) img {
+  margin-right: 10vh; /* Remove espaçamento à direita para a segunda div */
+
+}
+
+.feature-content {
+  flex: 1;
+  max-width: 78vh;
+  margin: auto;
+  
+}
+
+.feature-title {
+  font-size: 7vh;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+  
+
+  
+}
+
+.feature-title1 {
+  font-size: 7vh;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+
+.feature-subtitle {
+  font-size: 3vh;
+  color: #424242; /* Cor do subtítulo */
+  text-align: justify; /* Justifica o texto */
+  text-justify: inter-word; /* Adicionalmente justifica o texto entre palavras */
+}
+
+
+.feature-subtitle1 {
+  font-size: 3vh;
+  color: #424242; /* Cor do subtítulo */
+  text-align: justify; /* Justifica o texto */
+  text-justify: inter-word; /* Adicionalmente justifica o texto entre palavras */
+
+}
+
+.start-Link{
+  background-color: transparent; 
+  border: 1px solid white;
+  color: rgb(255, 255, 255); 
+  padding: 15px 32px; /* Padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vh;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50vh; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.start-button:hover {
+  background-color: #45a049; /* Cor de fundo verde escuro ao passar o mouse */
+}
+

@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.box {
+  border: 1px solid #bbda9a;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  height: 28vh;
+  width: 54vh;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1vh;
+ 
+}
+
+.text {
+  font-size: 2.4vh;
+  color: black;
+  font-weight: bold;
+  margin-left: 4vh;
+  margin-right: 4vh;
+  margin-bottom: 0;
+}
+
+.cupsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 8vh); /* 5 colunas de 60px */
+  gap: 10px; /* Espaço entre os copos */
+  justify-content: center; /* Centraliza a grade */
+}
+
+.cup {
+  cursor: pointer;
+  display: flex;
+  
+  justify-content: space-between;
+  width: 60px; /* Tamanho do copo */
+  height: 60px; /* Tamanho do copo */
+  background-color: transparent; /* Fundo transparente */
+}
+
+.cup.filled {
+  color: #72BBFF; /* Cor do ícone quando o copo está cheio */
+}
